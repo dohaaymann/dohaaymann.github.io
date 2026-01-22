@@ -63,28 +63,74 @@
 
         /* Navigation */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 80px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(10, 14, 39, 0.9);
-            backdrop-filter: blur(10px);
-        }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(10, 14, 39, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 16px;
+}
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* 📱 Mobile AppBar */
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(10, 14, 39, 0.95);
+    display: none;
+  }
+
+  .nav-links li {
+    padding: 16px 0;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
 
         .logo {
             font-size: 24px;
             font-weight: 300;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
 
         .nav-links a {
             color: #fff;
@@ -720,8 +766,6 @@
         }
 
         @media (max-width: 768px) {
-
-            nav,
             section {
                 padding-left: 30px;
                 padding-right: 30px;
@@ -761,7 +805,33 @@
             .section-title {
                 font-size: 36px;
             }
+            .download-btn {
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.8s;
+            padding: 15px 40px;
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-right: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+            font-weight: 600;
         }
+
+        }
+        .google-play-img {
+  width: 180px; /* adjust as needed */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.google-play-img:hover {
+  transform: scale(1.05);
+}
+
     </style>
 </head>
 
@@ -769,19 +839,24 @@
     <div class="space-bg">
         <div class="stars" id="stars"></div>
     </div>
+<nav>
+  <div class="logo">&lt; Doha ayman /&gt;</div>
 
-    <nav>
-        <div class="logo">&lt; Doha ayman /&gt;</div>
-        <ul class="nav-links">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#education">EDUCATION</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#certifications">CERTIFICATIONS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-        <button class="theme-toggle">☀️</button>
-    </nav>
+  <ul class="nav-links">
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#education">EDUCATION</a></li>
+    <li><a href="#skills">SKILLS</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#certifications">CERTIFICATIONS</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="theme-toggle">☀️</button>
+    <button class="menu-toggle">☰</button>
+  </div>
+</nav>
+
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -927,11 +1002,15 @@
                     </div>
                 </div>
                 <div class="project-actions">
-                    <button type="button" class="google-play-btn"
-                        onclick="window.location.href='https://play.google.com/store/apps/details?id=com.dohadev.quotopia2'">
-                        Get it on Google Play
-                    </button>
-                </div>
+  <a href="https://play.google.com/store/apps/details?id=com.dohadev.quotopia2" target="_blank">
+    <img
+      src="assets\google play.png"
+      alt="Get it on Google Play"
+      class="google-play-img"
+    />
+  </a>
+</div>
+
             </div>
             <div class="project-card">
                 <img src="assets\Medsupply.png" alt="Med Supply Project" class="project-image">
@@ -955,6 +1034,16 @@
                         class="project-link">🎥
                         Watch Demo →</a>
                 </div>
+                      <div class="project-actions">
+  <a href="https://play.google.com/store/apps/details?id=com.medsupply.medsupply" target="_blank">
+    <img
+      src="assets\google play.png"
+      alt="Get it on Google Play"
+      class="google-play-img"
+    />
+  </a>
+</div>
+
             </div>
 
             <div class="project-card">
@@ -1128,6 +1217,16 @@
             });
         });
     </script>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+
 </body>
 
 </html>
