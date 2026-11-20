@@ -207,26 +207,28 @@ nav ul.open{transform:none}nav ul a{color:#fff;font-size:2.2rem;font-weight:400}
 const $=s=>document.querySelector(s),G="https://play.google.com/store/apps/details?id=",A="https://apps.apple.com/";
 const D="https://drive.google.com/file/d/";
 // [name, category, year, description, stack, google id, apple link, demo link, image, color]
+// [name, category, year, description, stack, google id, apple link, demo link, image file, color]
 const P=[
-["Kaya","AI","2026","AI health and wellness coach with subscriptions and push notifications.","Flutter,GetX,Firebase,Dio,Hive,FCM,PayPal,Apple IAP","com.genialabs.kaya.dev",A+"app/id6773043866","","","#2db8af"],
-["Smart Teacher","AI","2026","Students solve questions by taking a picture. The app analyzes the image and answers in a chat-based experience.","Flutter,Bloc,Dio,REST API,Vercel,Hive","com.smart112.teacher",A+"app/id6781229762","","smartteacher","#5a458d"],
-["Ask Sinai","Transport","2026","Transportation and booking app with map-based features.","Flutter,Dart,GetX,Firebase,Google Maps,REST API","com.genialabs.asksinai",A+"us/app/ask-sinai/id6804441218","","","#2762cb"],
-["Mashtal AI","AI","2025","AI assistant that detects plant diseases and gives care advice.","Flutter,Firebase,Gemini AI,GetX,Dio,Remote Config","com.genialabs.mashtal.ai","","","","#4a9d5b"],
-["Sino360","Transport","2025","Chinese VIN decoder and vehicle reports with in-app payments.","Flutter,GetX,Firebase,Dio,Stripe,PayPal","com.sino360.chinavin","","","","#b41100"],
-["MingcheJi","Transport","2026","Vehicle services app.","Flutter,Dart,GetX,Firebase,REST API,Dio","com.genailabs.mingcheji.cars","","","","#c95089"],
-["AI Assistant","AI","2025","AI-powered mobile assistant application.","Flutter,Bloc,Dio,REST API,Vercel,Hive","com.ar.ai.assistant","","","","#6b79f6"],
-["Quotopia","Community & Tools","2025","Quote-sharing app with Google Sign-In, community features (post, like, comment) and optimized pagination.","Flutter,Firebase,Bloc,FCM,Clean Architecture","com.dohadev.quotopia2","","","quotopia","#f6c350"],
-["Med Supply","E-commerce","2024","Medical e-commerce platform for pharmacists with 21,000+ products, pagination and local caching. Part-time project.","Flutter,Cubit,Dio,Hive,REST API","com.medsupply.medsupply","",D+"1XNGB-ush2yIrNPGA26Q84oAugWJ_NjrY/view","medsupply","#2762cb"],
-["OvyCare","Health","2025","Graduation project (A+): AI women's health app for PCOS/PCOD detection with period tracking and a directory of 369+ verified specialists.","Flutter,Firebase,Python,TensorFlow,Google Maps","","",D+"1aIQRgBCLfW6LQtcN-ZAxwMvUg3gvslx_/view","ovycare","#c95089"],
-["Thwaab","Community & Tools","2023","Daily duaas and adhkar with prayer time notifications, azan alerts and Qur'an recitations by well-known Sheikhs. Personal project.","Flutter,Provider,Local Database,REST API","","",D+"1QJIhSnX6D1XsUfiPVOjRCBavSzH8PBPn/view?usp=drivesdk","thwaab","#363636"],
-["Secure Password Manager","Community & Tools","2024","Local password storage with SQFlite, passcode lock and Arabic and English support. Personal project.","Flutter,SQFlite,GetX,Localization","","","","password","#757575"]];
+["Ask Sinai","Transport","2026","Transportation and booking app with map-based features.","Flutter,Dart,GetX,Firebase,Google Maps,REST API","com.genialabs.asksinai",A+"us/app/ask-sinai/id6804441218","","ask-sinai.png","#2762cb"],
+["Quotopia","Community & Tools","2025","Quote-sharing app with Google Sign-In, community features (post, like, comment) and optimized pagination.","Flutter,Firebase,Bloc,FCM,Clean Architecture","com.dohadev.quotopia2","","","quotopia.webp","#f6c350"],
+["MingcheJi","Transport","2026","Vehicle services app.","Flutter,Dart,GetX,Firebase,REST API,Dio","com.genailabs.mingcheji.cars","","","Mingcheji-Cars.png","#c95089"],
+["Kaya","AI","2026","AI health and wellness coach with subscriptions and push notifications.","Flutter,GetX,Firebase,Dio,Hive,FCM,PayPal,Apple IAP","com.genialabs.kaya.dev",A+"app/id6773043866","","kaya.png","#2db8af"],
+["Smart Teacher","AI","2026","Students solve questions by taking a picture. The app analyzes the image and answers in a chat-based experience.","Flutter,Bloc,Dio,REST API,Vercel,Hive","com.smart112.teacher",A+"app/id6781229762","","smartteacher.webp","#5a458d"],
+["Mashtal AI","AI","2025","AI assistant that detects plant diseases and gives care advice.","Flutter,Firebase,Gemini AI,GetX,Dio,Remote Config","com.genialabs.mashtal.ai","","","mashtal.png","#4a9d5b"],
+["Sino360","Transport","2025","Chinese VIN decoder and vehicle reports app. Users decode a vehicle's VIN and buy detailed reports through in-app payments with Stripe and PayPal.","Flutter,GetX,Firebase,Dio,REST API,Stripe,PayPal","com.sino360.chinavin","","","Sino360.png","#b41100"],
+["AI Assistant","AI","2025","AI-powered mobile assistant application.","Flutter,Bloc,Dio,REST API,Vercel,Hive","com.ar.ai.assistant","","","ai-assistant.png","#6b79f6"],
+["Med Supply","E-commerce","2024","Medical e-commerce platform for pharmacists with 21,000+ products, pagination and local caching. Part-time project.","Flutter,Cubit,Dio,Hive,REST API","com.medsupply.medsupply","",D+"1XNGB-ush2yIrNPGA26Q84oAugWJ_NjrY/view","medsupply.webp","#2762cb"],
+["OvyCare","Health","2025","Graduation project (A+): AI women's health app for PCOS/PCOD detection with period tracking and a directory of 369+ verified specialists.","Flutter,Firebase,Python,TensorFlow,Google Maps","","",D+"1aIQRgBCLfW6LQtcN-ZAxwMvUg3gvslx_/view","ovycare.webp","#c95089"],
+["Thwaab","Community & Tools","2023","Daily duaas and adhkar with prayer time notifications, azan alerts and Qur'an recitations by well-known Sheikhs. Personal project.","Flutter,Provider,Local Database,REST API","","",D+"1QJIhSnX6D1XsUfiPVOjRCBavSzH8PBPn/view?usp=drivesdk","thwaab.webp","#363636"],
+["Secure Password Manager","Community & Tools","2024","Local password storage with SQFlite, passcode lock and Arabic and English support. Personal project.","Flutter,SQFlite,GetX,Localization","","","","password.webp","#757575"]];
 const S={"Core":"OOP,Dependency Injection,Design Patterns,Clean Architecture,MVC","Flutter":"Dart,Responsive UI,Dio/HTTP,Localization,Google Maps,Payments (Stripe, PayPal, Apple IAP),FCM,Git,FlutterFlow,Figma","State Management":"GetX,BLoC (Cubit),Provider,Riverpod","Backend & Data":"Firebase,REST APIs,Gemini AI,MySQL,SQLite,Hive,Shared Preferences,Remote Config","Release & Tools":"Codemagic CI/CD,TestFlight,Google Play Console,App Store Connect,Flutter DevTools","Languages":"Dart,Python,C++,SQL"};
-const cov=(p,big)=>`<div class="cv" style="--c:${p[9]}" ${big?"":`data-i="${P.indexOf(p)}"`}>${p[8]?`<img src="assets/${p[8]}.webp" alt="${p[0]} screenshot" loading="lazy">`:p[0].split(" ").map(w=>w[0]).join("").slice(0,2)}</div>`;
+const cov=(p,big)=>`<div class="cv" style="--c:${p[9]}" ${big?"":`data-i="${P.indexOf(p)}"`}>${p[8]?`<img src="assets/${p[8]}" alt="${p[0]} screenshot" loading="lazy">`:p[0].split(" ").map(w=>w[0]).join("").slice(0,2)}</div>`;
 const tags=p=>p[4].split(",").map(t=>`<span>${t}</span>`).join("");
 const btn=(h,l)=>h?`<a class="bub" href="${h}" target="_blank" rel="noopener" style="margin:0 8px 8px 0"><span>${l}</span><b>→</b></a>`:"";
 const links=p=>btn(p[5]&&G+p[5],"GOOGLE PLAY")+btn(p[6],"APP STORE")+btn(p[7],"WATCH DEMO");
 $("#sk").innerHTML=Object.entries(S).map(([k,v])=>`<div class="up"><h3>${k}</h3><div class="tg">${v.split(",").map(t=>`<span>${t}</span>`).join("")}</div></div>`).join("");
-$("#ft").innerHTML=cov(P[0]).replace("data-i","data-i")+`<div><small>Featured project</small><h3>${P[0][0]} – AI Health &amp; Wellness Coach</h3><p>${P[0][3]}</p><div class="tg" style="margin:16px 0 22px">${tags(P[0])}</div>${links(P[0])}</div>`;
+const F=P.find(p=>p[0]=="Sino360");
+$("#ft").innerHTML=cov(F)+`<div><small>Featured project</small><h3>${F[0]} – Chinese VIN Decoder &amp; Vehicle Reports</h3><p>${F[3]}</p><div class="tg" style="margin:16px 0 22px">${tags(F)}</div>${links(F)}</div>`;
 const cats=[...new Set(P.map(p=>p[1]))],n2=n=>String(n).padStart(2,"0");
 let cur="All";
 function draw(){
